@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class platformGenerator : MonoBehaviour
+public class PlatformGenerator : MonoBehaviour
 {
-    public GameObject platformPrefab;
+    public GameObject standardplatform;
+    public GameObject bouncyplatform;
+    public GameObject coin;
 
-    public int numberOfPlatforms = 200;
+    public int numberOfPlatforms;
     public float levelWidth = 3f;
     public float minY = .2f;
     public float maxY = 1.5f;
@@ -19,7 +21,15 @@ public class platformGenerator : MonoBehaviour
         {
             spawnPosition.y += Random.Range(minY, maxY);
             spawnPosition.x = Random.Range(-levelWidth, levelWidth);
-            Instantiate(platformPrefab, spawnPosition, Quaternion.identity);
+            
+            if (i == 20)
+            {
+                Instantiate(bouncyplatform, spawnPosition, Quaternion.identity);
+            }
+            else
+            {
+                Instantiate(standardplatform, spawnPosition, Quaternion.identity);
+            }
         }
     }
 }
