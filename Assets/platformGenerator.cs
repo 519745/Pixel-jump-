@@ -7,15 +7,18 @@ public class PlatformGenerator : MonoBehaviour
     public GameObject standardplatform;
     public GameObject bouncyplatform;
     public GameObject coin;
+    public GameObject finalCoin;
 
+    public int CoinSpawn;
     public int numberOfPlatforms;
     public float levelWidth = 3f;
-    public float minY = .2f;
-    public float maxY = 1.5f;
+    public float minY;
+    public float maxY;
     void Start()
     {
 
         Vector3 spawnPosition = new Vector3();
+
 
         for (int i = 0; i < numberOfPlatforms; i++)
         {
@@ -29,6 +32,13 @@ public class PlatformGenerator : MonoBehaviour
             else
             {
                 Instantiate(standardplatform, spawnPosition, Quaternion.identity);
+
+                if (i == numberOfPlatforms)
+                {
+                    finalCoin = Instantiate(coin, new Vector2(), Quaternion.identity);
+                    //finalCoin.name = "fn";
+                    //finalCoin = GameObject.Find("fn");
+                }
             }
         }
     }
