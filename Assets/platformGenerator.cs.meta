@@ -4,8 +4,11 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - platformPrefab: {fileID: 6043754578470269974, guid: 189c4a025c530fd4d87446e19ffbce9c,
+  - standardplatform: {fileID: 7256085401697821672, guid: 7f44171aabbe60a4982c956a0f9948b3,
       type: 3}
+  - bouncyplatform: {fileID: 8107045072155547670, guid: f414007c7b6323a4090e0afa7669dcef,
+      type: 3}
+  - coin: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

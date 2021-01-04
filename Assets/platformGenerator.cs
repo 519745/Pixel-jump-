@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformGenerator : MonoBehaviour
+public class platformGenerator : MonoBehaviour
 {
     public GameObject standardplatform;
     public GameObject bouncyplatform;
     public GameObject coin;
-    public GameObject finalCoin;
 
     public int CoinSpawn;
     public int numberOfPlatforms;
@@ -35,7 +34,7 @@ public class PlatformGenerator : MonoBehaviour
 
                 if (i == numberOfPlatforms)
                 {
-                    finalCoin = Instantiate(coin, new Vector2(), Quaternion.identity);
+                    //finalCoin = Instantiate(coin, new Vector2(), Quaternion.identity);
                     //finalCoin.name = "fn";
                     //finalCoin = GameObject.Find("fn");
                 }
